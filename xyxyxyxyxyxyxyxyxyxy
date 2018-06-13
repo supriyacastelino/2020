@@ -1,0 +1,21 @@
+#include<stdio.h>
+struct coordinates
+{
+    float x;
+    float y;
+};
+int main()
+{
+    int i;
+    //write a progrm to store 5 x n y values//
+    struct coordinates a[10];
+    for( i=0;i<5;i++)
+    {
+        printf("enter x and y values of %dth loop\n",i+1);
+        scanf("%f%f",&a[i].x,&a[i].y);
+    }
+    for(int i=0;i<5;i++)
+    {
+        printf("%f,%f\n",a[i].x,a[i].y);
+    }
+}
