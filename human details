@@ -1,0 +1,35 @@
+#include<stdio.h>
+//for 1 human
+struct human
+{
+    char name[100];
+    int phone_number;
+};
+//for n number of humans
+struct humans
+{
+    struct human a[100];
+    int n;
+};
+int input()
+{
+    struct humans b;
+    printf("enter number of humans  \n");
+    scanf("%d",&b.n);
+    for(int i=0;i<b.n;i++)
+    {
+        printf("enter name of %dth human \n",i+1);
+        scanf("%s",b.a[i].name);
+        printf("enter phone number of %dth humans\n",i+1);
+        scanf("%d",&b.a[i].phone_number);
+    }
+    for(int i=0;i<b.n;i++)
+    {
+        printf("Details of %dth human are %s\t%d\n",i+1,b.a[i].name,b.a[i].phone_number);
+    }
+    
+}
+int main()
+{
+    input();
+}
