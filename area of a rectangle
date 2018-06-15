@@ -1,0 +1,50 @@
+//area of a rectangle
+#include<stdio.h>
+#include<math.h>
+struct coordinates
+{
+    float x;
+    float y;
+};
+struct rectangle
+{
+    struct coordinates point1;
+    struct coordinates point2;
+    struct coordinates point3;
+};
+struct  rectangles
+{
+    int n;
+    struct rectangle a[100];
+};
+int input()
+{
+    struct rectangles b;
+    printf("enter the number of rectangles\n");
+    scanf("%d",&b.n);
+    for(int i=0;i<b.n;i++)
+    {
+        printf("enter the coordinates of point1 of %dth rectangle\n",i+1);
+        scanf("%f%f",&b.a[i].point1.x,&b.a[i].point1.y);
+        printf("enter the coordinates of point2 of %dth rectangle\n",i+1);
+        scanf("%f%f",&b.a[i].point2.x,&b.a[i].point2.y);
+        printf("enter the coordinates of point3 of %dth rectangle\n",i+1);
+        scanf("%f%f",&b.a[i].point3.x,&b.a[i].point3.y);
+    }
+    return b;
+}    
+void output(struct rectangles b)
+{
+    //struct rectangles b;
+    for(int i=0;i<b.n;i++)
+    {
+    printf("the output is = %f%f%f%f%f%f",b.a[i].point1.x,b.a[i].point1.y,b.a[i].point2.x,b.a[i].point2.y,b.a[i].point3.x,b.a[i].point3.y);
+    }
+}
+int main()
+{
+    struct rectangles b;
+    b=input();
+    output(b);
+    return 0;
+}
