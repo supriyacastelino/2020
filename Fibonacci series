@@ -1,0 +1,54 @@
+#include<stdio.h>
+struct fibonacci_sequence
+{
+    int n;
+    char t1[100];
+    char t2[100];
+};
+struct fibonacci_sequences
+{
+    struct fibonacci_sequence a[100];
+    int m;
+   
+};
+int input()
+{
+    struct  fibonacci_sequences b;
+    for(int i=0;i<b.a[i].n;i++)
+    {
+    printf("enter the number of sequences\n");
+    scanf("%d",&b.a[i].n);
+    printf("enter the number of lines\n");
+    scanf("%d",&b.m);
+    }
+    return 0;
+}
+int compute()
+{
+    int n;
+    struct fibonacci_sequence a[100];
+    struct fibonacci_sequences b;
+    char first,second,next;
+    printf("the %d term of fibonacci series are:\n",n);
+    printf("enter the first and second character\n");
+    scanf("%s%s",first,second);
+    for(int i=0;i<n;i++)
+    {
+        next=first+second;
+        first=second;
+        second=next;
+    }
+}
+int output()
+{
+    char t[100];
+    char next[100];
+    printf("%d\n",next);
+}
+int main()
+{
+    int input();
+    int compute();
+    int output();
+    
+}
