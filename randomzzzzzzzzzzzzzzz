@@ -1,0 +1,37 @@
+#include<stdio.h>
+struct sentences
+{
+    char para[500];
+};
+struct paragraph
+{
+   struct sentences a[500];
+   int n;
+};
+struct paragraphs
+{
+    struct paragraph b[500];
+};
+struct paragraphs input()
+{
+   struct sentences a[500];
+   struct paragraph b[500];
+   struct paragraphs c[500];
+   printf("enter the number of paragraphs");
+   scanf("%d",&c[500].n);
+   printf("Enter Your Paragraph:");
+   scanf("%[^\t]s", para);
+}
+void output(struct paragraphs c[500])
+{
+    printf("Your Entered Paragraph is: %s",c[500].b[500].a[500].para);
+}
+int main()
+{
+   struct sentences a[500];
+   struct paragraph b[500];
+   struct paragraphs c[500];
+   a=input();
+   output(c);
+   return 0;
+}
