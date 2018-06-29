@@ -1,52 +1,67 @@
 #include<stdio.h>
 struct university
 {
-    int classes;
-    char classes[100];
-    int buses;
-    int faculties;
-    char faculties[100];
+    int class;
+    char classesname[100];
+    int bus;
+    int faculty;
+    char facultyname[100];
     int lab;
-    cahr lab[100];
-    int courses;
-    char courses[100];
+    char labname[100];
+    int course;
+    char coursesname[100];
 };
-struct university_input()
+struct universities
 {
-    struct university a;
+    struct university a[100];
+    int n;
+};
+struct university input()
+{
+    struct universities k;
+    for(int i=0;i<k.n;i++)
+    {
+    printf("enter the number of universities\n");
+    scanf("%d",&k.n);
     printf("enter the number of classes\n");
-    scanf("%d",&a.classes);
+    scanf("%d",&k.a[i].class);
     printf("enter the name of classes \n");
-    scanf("%s",a[100].classes);
+    scanf("%s",k.a[i].classesname);
     printf("enter the number of busses\n");
-    scanf("%d",&a.buses);
+    scanf("%d",&k.a[i].bus);
     printf("enter the number of faculties\n");
-    scanf("%d",&a.faculties);
+    scanf("%d",&k.a[i].faculty);
     printf("enter the name of faculties\n");
-    scanf("%s",a[100].faculties);
+    scanf("%s",k.a[i].facultyname);
     printf("enetr the number of lab\n");
-    scanf("%d",&a.lab);
+    scanf("%d",&k.a[i].lab);
     printf("enter the names of lab\n");
-    scanf("%s",a[100].lab);
+    scanf("%s",k.a[i].labname);
     printf("enter the number of courses\n");
-    scanf("%d",&a.courses);
+    scanf("%d",&k.a[i].course);
     printf("enter the names of courses\n");
-    scanf("%s",a[100].courses);
+    scanf("%s",k.a[i].coursesname);
+    }
+    return k;
 }
-void output(struct university a)
+void output(struct universities k)
 {
-    printf("the number of classes are:\n %d",a.classes);
-    printf("the name of classes are:\n %d",a[100].classes);
-    printf("the number of buses are:\n %d",a.buses);
-    printf("the number of faculties are:\n %d",a.faculties);
-    printf("the number of lab are:\n %d",a.lab);
-    printf("the name of lab are:\n %d",a[100].lab);
-    printf("the number of courses are:\n %d",a.courses);
-    printf("the name of courses are:\n %d",a[100].courses);
+    for(int i=0;i<k.n;i++)
+    {
+    printf("the number of classes are:\n %d",k.a[i].class);
+    printf("the name of classes are:\n %d",k.a[i].classesname);
+    printf("the number of buses are:\n %d",k.a[i].bus);
+    printf("the number of faculties are:\n %d",k.a[i].faculty);
+    printf("the names of faculties are :\n %d",k.a[i].facultyname);
+    printf("the number of lab are:\n %d",k.a[i].lab);
+    printf("the name of lab are:\n %d",k.a[i].labname);
+    printf("the number of courses are:\n %d",k.a[i].course);
+    printf("the name of courses are:\n %d",k.a[i].coursesname);
+    }
 }
 int main()
 {
-    struct university a;
-    a=university_input();
-    output(a);
+    struct universities k;
+    k=input();
+    output(k);
 }
