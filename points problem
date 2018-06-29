@@ -1,0 +1,30 @@
+#include<stdio.h>
+struct point
+{
+    float x;
+    float y;
+};
+struct points
+{
+    int n;
+    struct point a[100];
+};
+struct points input()
+{
+    struct points b;
+    printf("enter the number of points\n");
+    scanf("%d",&b.n);
+    for(int i=0;i<b.n;i++)
+    {
+        printf("enter the value of x and y \n");
+        scanf("%d%d",&b.a[i].x,&b.a[i].y);
+    }
+    return b;
+}
+int main()
+{
+    struct points b;
+    b=input();
+    output(b);
+    return 0;
+}
