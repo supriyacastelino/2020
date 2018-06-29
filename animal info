@@ -1,0 +1,85 @@
+#include <stdio.h>
+struct zoo
+{
+	int enclosure;
+};
+struct enclosures
+{
+	struct zoo a;
+	int open;
+	int caged;
+};
+struct animals
+{
+	int male;
+	int female;
+	char male[100];
+	char female[100];
+};
+struct zoo_input()
+{
+	struct zoo a;
+	printf("enter number of enclosures\n");
+	scanf("%d",&a.enclosure);
+	return a;
+}
+void output(struct zoo)
+{
+	printf("the number of enclosures are = /n %d",a.enclosure);
+}
+struct enclosure_input()
+{
+	struct enclosures b;
+	printf("enter the number of open and closed enclosure\n");
+	scanf("%d%d",&b.open,&b.caged);
+	return b;
+}
+void output(struct enclosure)
+{
+	printf("the number of open enclosure are = \n %d",b.open);
+	printf("the number of closed enclosure are=\n%d",b.caged);
+}
+struct animals_input()
+{
+	struct animals c;
+	printf("enter the number of male and female animals\n");
+	scanf("%d%d",&c.male,&c.female);
+	for(int i=0;i<=male;i++)
+	{
+		printf("enter the names of male animals\n");
+		scanf("%s",c[i].male);
+	}
+	for(int j=0;j<=female;j++)
+	{
+		printf("enter the names of female animals\n");
+		scanf("%s",c[j].female);
+	}
+	return c;
+}
+void output(struct animals)
+{
+	printf("the number of male animals are=\n %d",c.male);
+	printf("the number of female animals are=\n %d",c.female);
+	for(int i=0;i<=male;i++)
+	{
+	printf("the names of %dth male animal is=%s",i+1,c[i].male);
+	}
+		for(int j=0;j<=female;j++)
+	{
+	printf("the names of %dth female animal is=%s",i+1,c[i].female);
+	}
+}
+int main()
+{
+	struct zoo a;
+	struct enclosure b;
+	struct animals c;
+	a=input();
+	output(a);
+	b=input();
+	output(b);
+	c=input();
+	output(c);
+	return 0;
+}
+
