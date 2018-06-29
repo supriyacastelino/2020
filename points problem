@@ -17,9 +17,17 @@ struct points input()
     for(int i=0;i<b.n;i++)
     {
         printf("enter the value of x and y \n");
-        scanf("%d%d",&b.a[i].x,&b.a[i].y);
+        scanf("%f%f",&b.a[i].x,&b.a[i].y);
     }
     return b;
+}
+void output(struct points b)
+{
+    for(int i=0;i<b.n;i++)
+    {
+    printf("the number of points are:\n %d",b.n);
+    printf("the value of %dth x and %dth y are :\n %f,%f",i+1,i+1,b.a[i].x,b.a[i].y);
+    }
 }
 int main()
 {
